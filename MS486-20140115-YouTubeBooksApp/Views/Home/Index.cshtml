@@ -1,4 +1,7 @@
-﻿@{
+﻿@model List<MS486_20140115_YouTubeBooksApp.Models.Book>
+
+
+@{
     Layout = null;
 }
 
@@ -11,8 +14,30 @@
 </head>
 <body>
     <div>
-        Show the Book Collection here
-        @Html.ActionLink("Add new Book", "AddBook");
+        <table>
+            @{
+                foreach (var book in Model)
+                {
+                    <tr>
+                        <td>
+                            Author: @book.AuthorName
+                        </td>
+                        <td>
+                            Title: @book.Title
+                        </td>
+                        <td>
+                            Publisher: @book.Publisher
+                    </td>
+                    <td>
+                        Publish Date: @book.PublishDate.ToShortDateString()
+                    </td>
+                </tr>
+                }
+            }
+        </table>
+    </div>
+    <div>
+        @Html.ActionLink("Add new Book", "AddBook")
     </div>
 </body>
 </html>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MS486_20140115_YouTubeBooksApp.Models;
 
 namespace MS486_20140115_YouTubeBooksApp.Controllers
 {
@@ -13,13 +14,41 @@ namespace MS486_20140115_YouTubeBooksApp.Controllers
 
         public ActionResult Index()
         {
-            int hour = DateTime.Now.Hour;
-            ViewBag.Message = hour < 12? "Good morning" : "Good afternoon";
+            var booksCollection = new List<Book>();
+            if (Session["BooksCollection"] != null)
+            {
+                booksCollection = (List<Book>) Session["BooksCollection"];
+            }
+            return View(booksCollection);
+        }
+
+        [HttpGet]
+        public ActionResult AddBook()
+        {
             return View();
         }
-        public string SomeAction()
+
+        [HttpPost]
+        public ActionResult AddBook(Book newBook)
         {
-            return "This text is from SomeAction()";
+            var booksCollection = new List<Book>();
+
+            if (Session["BooksCollection"] != null)
+            {
+                booksCollection.AddRange( (List<Book>) Session["BooksCollection"] );
+            }
+            booksCollection.Add(newBook);
+
+            Session["BooksCollection"] = booksCollection;
+
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

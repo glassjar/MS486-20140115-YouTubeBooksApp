@@ -1,0 +1,27 @@
+﻿@model MS486_20140115_YouTubeBooksApp.Models.Book
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddBook</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <p>Author name: @Html.TextBoxFor(m=> Model.AuthorName)</p>
+            <p>Title: @Html.TextBoxFor(m=> Model.Title)</p>
+            <p>Publisher: @Html.TextBoxFor(m => Model.Publisher)</p>
+            <p>Publish Date: @Html.EditorFor(m => Model.PublishDate)</p>
+            <input type="submit" name="Add Book" />
+        }
+    </div>
+</body>
+</html>
