@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Web
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS486-20140115-YouTubeBooksApp", "MS486-20140115-YouTubeBooksApp\MS486-20140115-YouTubeBooksApp.csproj", "{FB481E44-B8B7-42C0-A2A3-4BB0D7520386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS486-20140115-YouTubeBooksApp.Tests", "MS486-20140115-YouTubeBooksApp.Tests\MS486-20140115-YouTubeBooksApp.Tests.csproj", "{ED55DA70-15A4-4F1E-8A7D-DF8C5D961291}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB481E44-B8B7-42C0-A2A3-4BB0D7520386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB481E44-B8B7-42C0-A2A3-4BB0D7520386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB481E44-B8B7-42C0-A2A3-4BB0D7520386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB481E44-B8B7-42C0-A2A3-4BB0D7520386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED55DA70-15A4-4F1E-8A7D-DF8C5D961291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED55DA70-15A4-4F1E-8A7D-DF8C5D961291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED55DA70-15A4-4F1E-8A7D-DF8C5D961291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED55DA70-15A4-4F1E-8A7D-DF8C5D961291}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
